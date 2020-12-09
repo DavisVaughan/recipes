@@ -97,7 +97,7 @@ variables using natural splines." />
         <a class="navbar-brand" href="../index.html">recipes</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.14.9000</span>
+          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.15.9000</span>
         </div>
       </div>
     </div>
@@ -188,7 +188,7 @@ variables using natural splines.</p>
 <span class='op'>)</span>
 
 <span class='co'># S3 method for step_ns</span>
-<span class='fu'><a href='https://rdrr.io/pkg/generics/man/tidy.html'>tidy</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+<span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -224,7 +224,10 @@ created once the step has been trained.</p></td>
     </tr>
     <tr>
       <th>deg_free</th>
-      <td><p>The degrees of freedom.</p></td>
+      <td><p>The degrees of freedom for the natural spline. As the
+degrees of freedom for a natural spline increase, more flexible and
+complex curves can be generated. When a single degree of freedom is used,
+the result is a rescaled version of the original data.</p></td>
     </tr>
     <tr>
       <th>options</th>
