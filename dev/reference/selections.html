@@ -76,7 +76,7 @@ has the effect of adding all variables to the list except the
 excluded variable(s).
 
 
-Also, select helpers from the tidyselect package can also be used:
+Select helpers from the tidyselect package can also be used:
 tidyselect::starts_with(), tidyselect::ends_with(),
 tidyselect::contains(), tidyselect::matches(),
 tidyselect::num_range(), tidyselect::everything(),
@@ -95,7 +95,7 @@ step_pca(), the number of columns created by feature extraction
 may not be known when subsequent steps are defined. In this
 case, using matches(&quot;^PC&quot;) will select all of the columns
 whose names start with &quot;PC&quot; once those columns are created.
-There are sets of recipes specific functions that can be used to select
+There are sets of recipes-specific functions that can be used to select
 variables based on their role or type: has_role() and
 has_type(). For convenience, there are also functions that are
 more specific. The functions all_numeric() and all_nominal() select
@@ -150,9 +150,15 @@ will not work." />
   gtag('config', 'UA-115082821-1');
 </script>
 
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -169,7 +175,7 @@ will not work." />
         <a class="navbar-brand" href="../index.html">recipes</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.15.9000</span>
+          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.16.9000</span>
         </div>
       </div>
     </div>
@@ -219,7 +225,7 @@ will not work." />
 </li>
         <li>
   <a href="https://github.com/tidymodels/recipes/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -249,7 +255,7 @@ type, or any combination of these. The selectors are passed as
 any other argument to the step. If the variables are explicitly
 stated in the step function, this might be similar to:</p>
 <pre>
-  <span class='fu'><a href='recipe.html'>recipe</a></span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>.</span>, data <span class='op'>=</span> <span class='va'>USArrests</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='recipe.html'>recipe</a></span><span class='op'>(</span> <span class='op'>~</span> <span class='va'>.</span>, data <span class='op'>=</span> <span class='va'>USArrests</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
     <span class='fu'><a href='step_pca.html'>step_pca</a></span><span class='op'>(</span><span class='va'>Murder</span>, <span class='va'>Assault</span>, <span class='va'>UrbanPop</span>, <span class='va'>Rape</span>, num_comp <span class='op'>=</span> <span class='fl'>3</span><span class='op'>)</span>
 </pre>
 
@@ -268,7 +274,7 @@ has the effect of adding all variables to the list except the
 excluded variable(s).</p></li>
 </ol>
 
-<p>Also, select helpers from the <code>tidyselect</code> package can also be used:
+<p>Select helpers from the <code>tidyselect</code> package can also be used:
 <code><a href='https://tidyselect.r-lib.org/reference/starts_with.html'>tidyselect::starts_with()</a></code>, <code><a href='https://tidyselect.r-lib.org/reference/starts_with.html'>tidyselect::ends_with()</a></code>,
 <code><a href='https://tidyselect.r-lib.org/reference/starts_with.html'>tidyselect::contains()</a></code>, <code><a href='https://tidyselect.r-lib.org/reference/starts_with.html'>tidyselect::matches()</a></code>,
 <code><a href='https://tidyselect.r-lib.org/reference/starts_with.html'>tidyselect::num_range()</a></code>, <code><a href='https://tidyselect.r-lib.org/reference/everything.html'>tidyselect::everything()</a></code>,
@@ -276,7 +282,7 @@ excluded variable(s).</p></li>
 <code><a href='https://tidyselect.r-lib.org/reference/all_of.html'>tidyselect::any_of()</a></code></p>
 <p>For example:</p>
 <pre>
-  <span class='fu'><a href='recipe.html'>recipe</a></span><span class='op'>(</span><span class='va'>Species</span> <span class='op'>~</span> <span class='va'>.</span>, data <span class='op'>=</span> <span class='va'>iris</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='recipe.html'>recipe</a></span><span class='op'>(</span><span class='va'>Species</span> <span class='op'>~</span> <span class='va'>.</span>, data <span class='op'>=</span> <span class='va'>iris</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
     <span class='fu'><a href='step_center.html'>step_center</a></span><span class='op'>(</span><span class='fu'><a href='https://tidyselect.r-lib.org/reference/starts_with.html'>starts_with</a></span><span class='op'>(</span><span class='st'>"Sepal"</span><span class='op'>)</span>, <span class='op'>-</span><span class='fu'><a href='https://tidyselect.r-lib.org/reference/starts_with.html'>contains</a></span><span class='op'>(</span><span class='st'>"Width"</span><span class='op'>)</span><span class='op'>)</span>
 </pre>
 
@@ -285,9 +291,9 @@ excluded variable(s).</p></li>
 is coded can also be selected. For example, when using
 <code><a href='step_pca.html'>step_pca()</a></code>, the number of columns created by feature extraction
 may not be known when subsequent steps are defined. In this
-case, using <code><a href='https://tidyselect.r-lib.org/reference/starts_with.html'>matches("^PC")</a></code> will select all of the columns
+case, using <code>matches("^PC")</code> will select all of the columns
 whose names start with "PC" <em>once those columns are created</em>.</p>
-<p>There are sets of recipes specific functions that can be used to select
+<p>There are sets of recipes-specific functions that can be used to select
 variables based on their role or type: <code><a href='has_role.html'>has_role()</a></code> and
 <code><a href='has_role.html'>has_type()</a></code>. For convenience, there are also functions that are
 more specific. The functions <code><a href='has_role.html'>all_numeric()</a></code> and <code><a href='has_role.html'>all_nominal()</a></code> select
@@ -297,7 +303,7 @@ Any can be used in conjunction with the previous functions described for
 selecting variables using their names:</p>
 <pre>
   <span class='fu'><a href='https://rdrr.io/r/utils/data.html'>data</a></span><span class='op'>(</span><span class='va'>biomass</span><span class='op'>)</span>
-  <span class='fu'><a href='recipe.html'>recipe</a></span><span class='op'>(</span><span class='va'>HHV</span> <span class='op'>~</span> <span class='va'>.</span>, data <span class='op'>=</span> <span class='va'>biomass</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+  <span class='fu'><a href='recipe.html'>recipe</a></span><span class='op'>(</span><span class='va'>HHV</span> <span class='op'>~</span> <span class='va'>.</span>, data <span class='op'>=</span> <span class='va'>biomass</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
     <span class='fu'><a href='step_center.html'>step_center</a></span><span class='op'>(</span><span class='fu'><a href='has_role.html'>all_numeric</a></span><span class='op'>(</span><span class='op'>)</span>, <span class='op'>-</span><span class='fu'><a href='has_role.html'>all_outcomes</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
 </pre>
 
@@ -315,7 +321,7 @@ previously using <code><a href='step_dummy.html'>step_dummy()</a></code>. The im
 the other step functions. Only the selector functions from
 recipes and tidyselect are allowed. User defined selector functions
 will not be recognized. Additionally, the tidyselect domain specific
-language is not recognized here, meaning that <code>&amp;</code>, <code><a href='https://rdrr.io/r/base/Logic.html'>|</a></code>, <code><a href='https://rdrr.io/r/base/Logic.html'>!</a></code>, and <code><a href='https://rdrr.io/r/base/Arithmetic.html'>-</a></code>
+language is not recognized here, meaning that <code>&amp;</code>, <code>|</code>, <code>!</code>, and <code>-</code>
 will not work.</p>
     </div>
 
@@ -348,6 +354,8 @@ will not work.</p>
 
   
 
+
+  
 
   </body>
 </html>

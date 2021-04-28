@@ -78,9 +78,15 @@ or NaN values." />
   gtag('config', 'UA-115082821-1');
 </script>
 
+  
+
+  
+
   </head>
 
   <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -97,7 +103,7 @@ or NaN values." />
         <a class="navbar-brand" href="../index.html">recipes</a>
         <div class="info hidden-xs hidden-sm">
           <span class="partof">part of <a href="https://tidymodels.org">tidymodels</a></span>
-          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.15.9000</span>
+          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">0.1.16.9000</span>
         </div>
       </div>
     </div>
@@ -147,7 +153,7 @@ or NaN values." />
 </li>
         <li>
   <a href="https://github.com/tidymodels/recipes/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -256,25 +262,25 @@ before starting a preprocessing <code><a href='recipe.html'>recipe()</a></code>.
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'>
-<span class='fu'><a href='recipe.html'>recipe</a></span><span class='op'>(</span><span class='va'>Ozone</span> <span class='op'>~</span> <span class='va'>.</span>, data <span class='op'>=</span> <span class='va'>airquality</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'>step_naomit</span><span class='op'>(</span><span class='va'>Solar.R</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
-  <span class='fu'><a href='prep.html'>prep</a></span><span class='op'>(</span><span class='va'>airquality</span>, verbose <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'>%&gt;%</span>
+<span class='fu'><a href='recipe.html'>recipe</a></span><span class='op'>(</span><span class='va'>Ozone</span> <span class='op'>~</span> <span class='va'>.</span>, data <span class='op'>=</span> <span class='va'>airquality</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'>step_naomit</span><span class='op'>(</span><span class='va'>Solar.R</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
+  <span class='fu'><a href='prep.html'>prep</a></span><span class='op'>(</span><span class='va'>airquality</span>, verbose <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span> <span class='op'><a href='https://magrittr.tidyverse.org/reference/pipe.html'>%&gt;%</a></span>
   <span class='fu'><a href='bake.html'>bake</a></span><span class='op'>(</span>new_data <span class='op'>=</span> <span class='cn'>NULL</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 146 x 6</span><span>
+</div><div class='co'>#&gt; <span style='color: #949494;'># A tibble: 146 x 6</span>
 #&gt;    Solar.R  Wind  Temp Month   Day Ozone
-#&gt;      </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span>
-#&gt; </span><span style='color: #555555;'> 1</span><span>     190   7.4    67     5     1    41
-#&gt; </span><span style='color: #555555;'> 2</span><span>     118   8      72     5     2    36
-#&gt; </span><span style='color: #555555;'> 3</span><span>     149  12.6    74     5     3    12
-#&gt; </span><span style='color: #555555;'> 4</span><span>     313  11.5    62     5     4    18
-#&gt; </span><span style='color: #555555;'> 5</span><span>     299   8.6    65     5     7    23
-#&gt; </span><span style='color: #555555;'> 6</span><span>      99  13.8    59     5     8    19
-#&gt; </span><span style='color: #555555;'> 7</span><span>      19  20.1    61     5     9     8
-#&gt; </span><span style='color: #555555;'> 8</span><span>     194   8.6    69     5    10    </span><span style='color: #BB0000;'>NA</span><span>
-#&gt; </span><span style='color: #555555;'> 9</span><span>     256   9.7    69     5    12    16
-#&gt; </span><span style='color: #555555;'>10</span><span>     290   9.2    66     5    13    11
-#&gt; </span><span style='color: #555555;'># … with 136 more rows</span><span></div><div class='input'>
-</div></span></pre>
+#&gt;      <span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #949494;font-style: italic;'>&lt;int&gt;</span>
+#&gt; <span style='color: #BCBCBC;'> 1</span><span>     190   7.4    67     5     1    41</span>
+#&gt; <span style='color: #BCBCBC;'> 2</span><span>     118   8      72     5     2    36</span>
+#&gt; <span style='color: #BCBCBC;'> 3</span><span>     149  12.6    74     5     3    12</span>
+#&gt; <span style='color: #BCBCBC;'> 4</span><span>     313  11.5    62     5     4    18</span>
+#&gt; <span style='color: #BCBCBC;'> 5</span><span>     299   8.6    65     5     7    23</span>
+#&gt; <span style='color: #BCBCBC;'> 6</span><span>      99  13.8    59     5     8    19</span>
+#&gt; <span style='color: #BCBCBC;'> 7</span><span>      19  20.1    61     5     9     8</span>
+#&gt; <span style='color: #BCBCBC;'> 8</span><span>     194   8.6    69     5    10    </span><span style='color: #BB0000;'>NA</span>
+#&gt; <span style='color: #BCBCBC;'> 9</span><span>     256   9.7    69     5    12    16</span>
+#&gt; <span style='color: #BCBCBC;'>10</span><span>     290   9.2    66     5    13    11</span>
+#&gt; <span style='color: #949494;'># … with 136 more rows</span></div><div class='input'>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -301,6 +307,8 @@ before starting a preprocessing <code><a href='recipe.html'>recipe()</a></code>.
 
   
 
+
+  
 
   </body>
 </html>
