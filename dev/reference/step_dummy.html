@@ -139,10 +139,10 @@ the original data." />
       <a href="../articles/Skipping.html">On Skipping Steps</a>
     </li>
     <li>
-      <a href="../articles/articles/Subsampling.html">Subsampling for Class Imbalances</a>
+      <a href="https://www.tidymodels.org/learn/models/sub-sampling/">Subsampling for Class Imbalances</a>
     </li>
     <li>
-      <a href="../articles/articles/Multivariate_PLS.html">Multivariate Analysis using Partial Least Squares</a>
+      <a href="https://www.tidymodels.org/learn/models/pls/">Multivariate Analysis using Partial Least Squares</a>
     </li>
   </ul>
 </li>
@@ -195,10 +195,7 @@ the original data.</p>
   keep_original_cols <span class='op'>=</span> <span class='cn'>FALSE</span>,
   skip <span class='op'>=</span> <span class='cn'>FALSE</span>,
   id <span class='op'>=</span> <span class='fu'><a href='rand_id.html'>rand_id</a></span><span class='op'>(</span><span class='st'>"dummy"</span><span class='op'>)</span>
-<span class='op'>)</span>
-
-<span class='co'># S3 method for step_dummy</span>
-<span class='fu'><a href='https://generics.r-lib.org/reference/tidy.html'>tidy</a></span><span class='op'>(</span><span class='va'>x</span>, <span class='va'>...</span><span class='op'>)</span></pre>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -213,8 +210,7 @@ sequence of operations for this recipe.</p></td>
       <td><p>One or more selector functions to choose which
 <em>factor</em> variables will be used to create the dummy variables. See
 <code><a href='selections.html'>selections()</a></code> for more details. The selected
-variables must be factors. For the <code><a href='https://generics.r-lib.org/reference/tidy.html'>tidy()</a></code> method, these are
-not currently used.</p></td>
+variables must be factors.</p></td>
     </tr>
     <tr>
       <th>role</th>
@@ -268,19 +264,12 @@ the computations for subsequent operations</p></td>
       <th>id</th>
       <td><p>A character string that is unique to this step to identify it.</p></td>
     </tr>
-    <tr>
-      <th>x</th>
-      <td><p>A <code>step_dummy</code> object.</p></td>
-    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>An updated version of <code>recipe</code> with the new step
-added to the sequence of existing steps (if any). For the
-<code>tidy</code> method, a tibble with columns <code>terms</code> (the
-selectors or original variables selected) and <code>columns</code> (the
-list of corresponding binary columns).</p>
+added to the sequence of existing steps (if any).</p>
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
     <p><code>step_dummy()</code> will create a set of binary dummy
@@ -322,6 +311,9 @@ be changed by passing in a different function to the <code>naming</code> argumen
 this step.</p>
 <p>The <a href='https://recipes.tidymodels.org/articles/Dummies.html'>package vignette for dummy variables</a>
 and interactions has more information.</p>
+<p>When you <code><a href='https://generics.r-lib.org/reference/tidy.html'>tidy()</a></code> this step, a tibble with columns <code>terms</code> (the
+selectors or original variables selected) and <code>columns</code> (the
+list of corresponding binary columns) is returned.</p>
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
     <div class='dont-index'><p><code><a href='step_factor2string.html'>step_factor2string()</a></code>, <code><a href='step_string2factor.html'>step_string2factor()</a></code>,
